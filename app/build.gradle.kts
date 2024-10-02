@@ -20,6 +20,13 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        addManifestPlaceholders(
+            mapOf(
+                "auth0Domain" to "dev-6svay1o461286x71.us.auth0.com",
+                "auth0Scheme" to "demo"
+            )
+        )
+
     }
 
     buildTypes {
@@ -31,11 +38,15 @@ android {
             )
             buildConfigField("String", "SPACEFLIGHT_NEWS_BASE_URL", "\"https://api.spaceflightnewsapi.net\"")
             buildConfigField("String", "SPACEFLIGHT_NEWS_API_VERSION", "\"v4\"")
+            buildConfigField("String", "COM_AUTH0_DOMAIN", "dev-6svay1o461286x71.us.auth0.com")
+            buildConfigField("String", "COM_AUTH0_CLIENTID", "vLrnt38w7QxlLhvz2t1Tp6RDrRi4OIGP")
         }
         debug {
             isMinifyEnabled = false
             buildConfigField("String", "SPACEFLIGHT_NEWS_BASE_URL", "\"https://api.spaceflightnewsapi.net\"")
             buildConfigField("String", "SPACEFLIGHT_NEWS_API_VERSION", "\"v4\"")
+            buildConfigField("String", "COM_AUTH0_DOMAIN", "\"dev-6svay1o461286x71.us.auth0.com\"")
+            buildConfigField("String", "COM_AUTH0_CLIENTID", "\"vLrnt38w7QxlLhvz2t1Tp6RDrRi4OIGP\"")
         }
 
     }
@@ -70,6 +81,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.appcompat)
+    implementation(libs.auth0)
 
     // Networking
     implementation(libs.gson)

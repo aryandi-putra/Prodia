@@ -30,6 +30,14 @@ class NewsViewModel @Inject constructor(
                 initialValue = NewsUiState(isLoading = true),
             )
 
+    fun checkLogin() {
+        if (true) {
+            getNews()
+        } else {
+
+        }
+    }
+
     fun getNews(isRefresh: Boolean = false) = viewModelScope.launch {
         _uiState.value = _uiState.value.copy(isRefresh = isRefresh)
         getNewsUseCase()
