@@ -1,4 +1,4 @@
-package com.aryandi.prodia.presentation
+package com.aryandi.prodia.presentation.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -25,7 +25,8 @@ class MainActivity : ComponentActivity() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Column(modifier = Modifier.fillMaxSize()) {
                         Greeting(
-                            name = "Android",
+                            time = "Morning",
+                            name = "User",
                             modifier = Modifier.padding(innerPadding)
                         )
                         NewsScreen(onArticleClick = { articleUrl ->
@@ -38,9 +39,9 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun Greeting(time: String, name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
+        text = "Good $time, $name!",
         modifier = modifier
     )
 }
@@ -49,6 +50,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     ProdiaTheme {
-        Greeting("Android")
+        Greeting("Morning","User")
     }
 }

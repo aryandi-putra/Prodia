@@ -1,4 +1,4 @@
-package com.aryandi.prodia.presentation
+package com.aryandi.prodia.presentation.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
