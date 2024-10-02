@@ -3,7 +3,7 @@ package com.aryandi.prodia.data.api.mapper
 import com.aryandi.prodia.data.api.model.ArticleRemote
 import com.aryandi.prodia.domain.model.Article
 import com.aryandi.prodia.domain.model.Launch
-import com.aryandi.util.DateParser
+import com.aryandi.prodia.util.DateParser
 
 interface ArticleMapper {
     fun mapToDomain(articleRemote: ArticleRemote): Article

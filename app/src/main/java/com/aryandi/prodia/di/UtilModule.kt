@@ -1,7 +1,7 @@
 package com.aryandi.prodia.di
 
-import com.aryandi.util.DateParser
-import com.aryandi.util.DateParserImpl
+import com.aryandi.prodia.util.DateParser
+import com.aryandi.prodia.util.DateParserImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

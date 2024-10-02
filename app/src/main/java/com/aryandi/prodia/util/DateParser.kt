@@ -1,4 +1,4 @@
-package com.aryandi.util
+package com.aryandi.prodia.util
 
 import org.joda.time.DateTime
 import org.joda.time.format.DateTimeFormat

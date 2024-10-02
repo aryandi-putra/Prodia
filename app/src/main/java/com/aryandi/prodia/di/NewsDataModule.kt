@@ -5,7 +5,7 @@ import com.aryandi.prodia.data.api.mapper.ArticleMapper
 import com.aryandi.prodia.data.api.mapper.ArticleMapperImpl
 import com.aryandi.prodia.data.repository.NewsRepositoryImpl
 import com.aryandi.prodia.domain.repository.NewsRepository
-import com.aryandi.util.DateParser
+import com.aryandi.prodia.util.DateParser
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -8,11 +8,11 @@ import retrofit2.http.Query
 interface NewsService {
 
     @GET("articles")
-    suspend fun getArticles(@Query("limit") resultLimit: String = "50"): PaginatedResultRemote<List<ArticleRemote>>
+    suspend fun getArticles(@Query("limit") resultLimit: String = "10"): PaginatedResultRemote<List<ArticleRemote>>
 
     @GET("articles")
     suspend fun filterArticles(
         @Query("title_contains") title: String,
-        @Query("limit") resultLimit: String = "50",
+        @Query("limit") resultLimit: String = "10",
     ): PaginatedResultRemote<List<ArticleRemote>>
 }
